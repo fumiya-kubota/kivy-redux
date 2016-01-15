@@ -1,3 +1,4 @@
+
 class Store(object):
     def __init__(self, state, reducer):
         super(Store, self).__init__()
@@ -33,6 +34,4 @@ def create_store(reducer, initial_state=None):
     state = initial_state
     if state is None:
         state = reducer({})
-
     return Store(state, reducer)
-
