@@ -102,7 +102,6 @@ class TodoWidget(Widget):
     def __init__(self, **kwargs):
         super(TodoWidget, self).__init__(**kwargs)
         self.state = create_store(todo_app)
-        # 状態の更新を見張る。
         self.state.subscribe(self.update_todo)
         self.todo_layout.bind(on_complete=self.on_complete)
 
